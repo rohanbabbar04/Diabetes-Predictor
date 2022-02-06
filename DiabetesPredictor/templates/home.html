@@ -1,0 +1,120 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="content-section">
+    <form class="form-group" method="post" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">
+                <h1>Diabetes Form</h1>
+            </legend>
+            <div class="form-group mt-2">
+                {{ form.pregnancies.label(class='form-control-label label-form') }}
+                {% if form.pregnancies.errors %}
+                {{ form.pregnancies(class="form-control form-control-sm is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.pregnancies.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.pregnancies(class="form-control form-control-sm") }}
+                {% endif %}
+            </div>
+            <div class="form-group mt-3">
+                {{ form.glucose.label(class='form-control-label label-form') }}
+                {% if form.glucose.errors %}
+                {{ form.glucose(class="form-control form-control-sm is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.glucose.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.glucose(class="form-control form-control-sm") }}
+                {% endif %}
+            </div>
+            <div class="form-group mt-3">
+                {{ form.bp.label(class='form-control-label label-form') }}
+                {% if form.bp.errors %}
+                {{ form.bp(class="form-control form-control-sm is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.bp.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.bp(class="form-control form-control-sm") }}
+                {% endif %}
+            </div>
+            <div class="form-group mt-3">
+                {{ form.skin_thickness.label(class='form-control-label label-form') }}
+                {% if form.skin_thickness.errors %}
+                {{ form.skin_thickness(class="form-control form-control-sm is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.skin_thickness.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.skin_thickness(class="form-control form-control-sm") }}
+                {% endif %}
+            </div>
+            <div class="form-group mt-3">
+                {{ form.insulin.label(class='form-control-label label-form') }}
+                {% if form.insulin.errors %}
+                {{ form.insulin(class="form-control form-control-sm is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.insulin.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.insulin(class="form-control form-control-sm") }}
+                {% endif %}
+            </div>
+            <div class="form-group mt-3">
+                {{ form.bmi.label(class='form-control-label label-form') }}
+                {% if form.bmi.errors %}
+                {{ form.bmi(class="form-control form-control-sm is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.bmi.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.bmi(class="form-control form-control-sm") }}
+                {% endif %}
+            </div>
+            <div class="form-group mt-3">
+                {{ form.pedigree.label(class='form-control-label label-form') }}
+                {% if form.pedigree.errors %}
+                {{ form.pedigree(class="form-control form-control-sm is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.pedigree.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.pedigree(class="form-control form-control-sm") }}
+                {% endif %}
+            </div>
+            <div class="form-group mt-3">
+                {{ form.age.label(class='form-control-label label-form') }}
+                {% if form.age.errors %}
+                {{ form.age(class="form-control form-control-sm is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.age.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.age(class="form-control form-control-sm") }}
+                {% endif %}
+            </div>
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit(class='btn btn-outline-info submit_button ') }}
+        </div>
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="content-output">
+    {% if output==1 %}
+        <div class="row">
+            <img src="/static/pics/worried.png"  height="60px">
+            <h1 style="color:white;">Diabetes has been predicted</h1>
+        </div>
+            <h2 style="color:white;">Percentage that you have diabetes is {{predict_percent * 100}}%</h2>
+    {% else %}
+        <div class="row">
+            <img class="mr-3" src="/static/pics/smiley.png" width="80px" height="60px">
+            <h1 style="color:white;">Diabetes has not been predicted</h1>
+        </div>
+            <h2 style="color:white;">Percentage that you have diabetes is {{predict_percent * 100}}%</h2>
+    {% endif %}
+        </div>
+{% endblock content %}
