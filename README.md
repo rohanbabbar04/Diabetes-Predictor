@@ -1,6 +1,8 @@
 # Diabetes Predictor
 This is a Diabetes-Predictor created using the Flask Web Framework
+
 The application tells if the person has diabetes or not along with the probability percentage
+
 The model used is **Logistic Regression Model(solver='liblinear')**
 
 
