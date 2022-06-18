@@ -6,6 +6,8 @@ The application tells if the person has diabetes or not along with the probabili
 The model used is **Logistic Regression Model(solver='liblinear')**
 
 
+
+
 ## Tools and Technologies Used
 - Python Programming Language
 - Created the UI using HTML,CSS and Bootstrap
